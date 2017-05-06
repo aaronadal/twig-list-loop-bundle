@@ -1,0 +1,5 @@
+services:
+    aaronadal.twig_list_loop.extension:
+        class: Aaronadal\TwigListLoop\Twig\TwigExtension
+        tags:
+            - { name: 'twig.extension' }

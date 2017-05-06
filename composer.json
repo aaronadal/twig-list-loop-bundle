@@ -1,0 +1,29 @@
+{
+  "name": "aaronadal/twig-list-loop-bundle",
+  "description": "Symfony integration for aaronadal/twig-list-loop library.",
+  "type": "symfony-bundle",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Aarón Nadal",
+      "email": "aaronadal.dev@gmail.com"
+    }
+  ],
+  "require": {
+    "aaronadal/twig-list-loop": "^1.0",
+    "symfony/framework-bundle": "^2.8|^3.0"
+  },
+  "require-dev": {
+    "symfony/phpunit-bridge": "^2.8|^3.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Aaronadal\\TwigListLoopBundle\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Aaronadal\\Tests\\": "tests/"
+    }
+  }
+}
