@@ -19,8 +19,14 @@ class Configuration implements ConfigurationInterface
      */
     public function getConfigTreeBuilder()
     {
-        $treeBuilder = new TreeBuilder();
-        $rootNode    = $treeBuilder->root('aaronadal_twig_list_loop');
+        if(method_exists(TreeBuilder::class, 'getRootNode')) {
+            $treeBuilder = new TreeBuilder('aaronadal_twig_list_loop');
+            $rootNode    = $treeBuilder->getRootNode();
+        }
+        else {
+            $treeBuilder = new TreeBuilder();
+            $rootNode    = $treeBuilder->root('aaronadal_twig_list_loop');
+        }
 
         // Here you should define the parameters that are allowed to
         // configure your bundle. See the documentation linked above for
